@@ -48,16 +48,3 @@ This opens up entire world's of opportunity as you can package existing code,
 utilities, or use a programming language not yet supported by Fn.  Try the
 [Containers as Functions](6-Container-as-Function.md)
 tutorial to see how easy it is.
-
-## Functions Clients
-
-Functions can be invoked over HTTP using their "invoke endpoint".  You can
-either invoke the endpoint directly or use the OCI SDK to both manage and invoke
-functions.  We'll explore invoking a function via the
-[`oci-curl` utility](7-Functions-Clients.md) as well as invocation using the
-[OCI SDK for Functions](8-Functions-Clients-SDK.md).
-
-## Functions CI/CD
-
-In this lab we'll see how we can build and deploy functions using [Developer
-Cloud Service](9-Functions-CICD.md).

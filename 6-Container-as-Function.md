@@ -285,5 +285,4 @@ when developing any function.
 Having completed this lab you've successfully built a function using
 a custom Dockerfile. Congratulations!
 
-NEXT: [*Function Curl Client*](7-Functions-Clients-oci-curl.md), UP:
-[*Labs*](1-Labs.md), HOME: [*INDEX*](README.md)
+HOME: [*INDEX*](README.md)

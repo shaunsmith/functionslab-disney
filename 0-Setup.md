@@ -14,7 +14,6 @@ Your workshop instructor will provide you with the following:
 4. Auth Token--used as your password when logging into OCIR
 5. IP Address--of your hosted development environment machine
 6. VNC Password--to allow you to log into your hosted development machine
-7. URL of the preview release of the OCI SDK which includes Functions support.
 
 > As you make your way through this lab, look out for this icon.
 ![user input](images/userinput.png) Whenever you see it, it's time for you to
@@ -28,7 +27,7 @@ we're going to be working in the Phoenix region, you'll need to login into
 Ashburn to reset your password.
 
 ![user input](images/userinput.png) Log into the OCI console in Ashburn
-specifying the **cloudnative-devrel** tenancy.  
+specifying the *tenancy* your lab instructor shared with you.
 
 https://console.us-ashburn-1.oraclecloud.com
 

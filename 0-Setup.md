@@ -64,12 +64,12 @@ https://chrome.google.com/webstore/detail/vnc%C2%AE-viewer-for-google-ch/iabmpib
 > Guide](https://www.oracle.com/webfolder/technetwork/tutorials/infographics/oci_faas_gettingstarted_quickview/functions_quickview_top/functions_quickview/index.html#)
 
 ![user input](images/userinput.png) Log into your VM using the provided IP
-Address and password.  The VNC port is *5903* so the server address you'll need
-to provide will look like `n.n.n.n:5903`
+Address and password.  The VNC port is **5903** so the server address you'll need
+to provide will look like **`n.n.n.n:5903`**
 
 Enter the provided VNC password to complete your login.
 
-![vnc login](images/vnc-login.png)
+![vnc login](images/vnc-login.jpg)
 
 
 Open a terminal and type the following command to ensure you are using the

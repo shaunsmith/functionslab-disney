@@ -85,14 +85,14 @@ cmd: com.example.fn.HelloFunction::handleRequest
 The generated `func.yaml` file contains metadata about your function and
 declares a number of properties including:
 
-* schema_version--identifies the version of the schema for this function file. 
-* version--the version of the function.
-* runtime--the language used for this function.
-* build_image--the image used to build your function's image.
-* run_image--the image your function runs in.
+* schema_version--identifies the version of the schema for this function file
+* version--the version of the function
+* runtime--the language used for this function
+* build_image--the image used to build your function's image
+* run_image--the image your function runs in
 * cmd--the `cmd` property is set to the fully qualified name of the Java
   class and method that should be invoked when your `javafn` function is
-  called.
+  called
 
 The Java function init also generates a Maven `pom.xml` file to build and test
 your function.  The pom includes the Fn Java FDK runtime and the test libraries
@@ -199,8 +199,8 @@ output.
 ## Exploring the Code
 
 We've generated, compiled, deployed, and invoked the Java function so let's take
-a look at the code.  You may want to open the code in your favorite IDE or
-editor.
+a look at the code.  You may want to open the code in one of the IDEs available
+in the lab environment.
 
 Below is the generated `com.example.fn.HelloFunction` class.  As you can
 see the function is just a method on a POJO that takes a string value
@@ -236,7 +236,8 @@ The `fn init` command also generated a JUnit test for the function which uses
 the Java FDK's function test framework.  With this framework you can setup test
 fixtures with various function input values and verify the results.
 
-The generated test confirms that when no input is provided the function returns "Hello, world!".
+The generated test confirms that when no input is provided the function returns
+"Hello, world!".
 
 ```java
 package com.example.fn;
@@ -283,8 +284,9 @@ provided we get the expected result.
 You can see the `withBody()` method used to specify the value of the
 function input.
 
-You can run the tests by building your function with `fn build`.  This
-will cause Maven to compile and run the updated test class.  You can also invoke your tests directly from Maven using `mvn test` or from your IDE.
+You can run the tests by building your function with `fn build`.  This will
+cause Maven to compile and run the updated test class.  You can also invoke your
+tests directly from Maven using `mvn test` or from your IDE.
 
 ![user input](images/userinput.png)
 >`fn build`
@@ -381,9 +383,9 @@ Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test (default-test) on project hello: There are test failures.
 ```
 
-Oops! as we can see this function build has failed due to test failures--we
+*Oops!* as we can see this function build has failed due to test failures--we
 changed the code significantly but didn't update our tests!  We really
-should be doing test driven development and updating the test first but
+should be doing test driven development and updating the test first, but
 at least our bad behavior has been caught.  Let's update the tests
 to reflect our new expected results.  
 

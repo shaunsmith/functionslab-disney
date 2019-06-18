@@ -2,7 +2,7 @@
 
 In this lab you will explore serverless computing using Oracle Functions.
 
-## Oracle Functions or Fn
+## Oracle Functions and Fn
 
 Oracle Functions is built on the open source Fn Project and so much of the
 development experience is exactly the same so any experience you have with Fn

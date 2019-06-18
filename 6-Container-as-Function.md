@@ -259,7 +259,8 @@ imagedims   phx.ocir.io/cloudnative-devrel/shsmith/imagedims:0.0.2  ocid1.fnfunc
 With the function deployed let's invoke it to make sure it's working as
 expected. You'll need a jpeg or png file so either find one on your machine
 or download one.  If you've cloned this lab's Git repo you can use the
-`3x3.jpg` image that has a height and width of 3 pixels.
+`3x3.jpg` image that has a height and width of 3 pixels, or you can download
+it from the `images` folder in github.
 
 ![](images/userinput.png)
 >```

@@ -37,7 +37,7 @@ The `fn init` command creates a simple function with a bit of boilerplate to get
 you started. The `--runtime` option is used to indicate that the function we're
 going to develop will be written in Node. A number of other runtimes are also
 supported.  Fn creates the simple function along with several supporting files
-in the `/nodefn` directory.
+in the `nodefn` directory.
 
 ### Review your Function File
 
@@ -116,7 +116,7 @@ declares a number of properties including:
 
 There are other user specifiable properties but these will suffice for this
 example.  Note that if not specified, the name of your function will be taken
-from the containing folder name. 
+from the containing folder name.
 
 ### Other Function Files
 
@@ -138,8 +138,8 @@ context` command to check.
 > fn list contexts
 >```
 
-The `API URL` and `REGISTRY` values of the `*`d row should be pointing to Oracle
-Functions and OCIR, respectively:
+The `API URL` and `REGISTRY` values of the row with the `*` should be pointing
+to Oracle Functions and OCIR, respectively:
 
 ```shell
 CURRENT    NAME        PROVIDER    API URL                                           REGISTRY
@@ -171,8 +171,8 @@ have to directly enter the URL:
 
 https://console.us-phoenix-1.oraclecloud.com/functions/
 
-Ensure the `workshop` compartment is selected.  You should also be in the
-`us-phoenix-1` region.
+Navigate down the compartment hierarchy on the left hand dropdown from the *root*, to *workshop*, to the compartment for your location (disney-la, disney-seattle, disney-nyc, disney-orlando).  You should also be in the
+`us-phoenix-1` region, which you can select on the upper right.
 
 ![Applications List](images/applications-compartment.png)
 
@@ -181,24 +181,34 @@ correct simply choose the Phoenix region from the drop down menu.
 
 ![Functions Unavailable](images/functions-unavailable.png)
 
-![user input](images/userinput.png) click "Create Application" and complete the
-form with following values where NNN is your lab participant number.  
+![user input](images/userinput.png) click "Create Application" and complete using the values for your location below where NNN is your lab participant number.  
+
+**LA, Seattle:**
+
+>```sh
+> name: `labapp-NNN`
+> vcn: `disney-vcn`
+> subnet: `Public Subnet nFuS:PHX-AD-2`
+>```
+
+
+**NYC, Orlando:**
+
+>```sh
+> name: `labapp-NNN`
+> vcn: `disney-vcn`
+> subnet: `Public Subnet nFuS:PHX-AD-3`
+>```
 
 **IMPORTANT NOTE**: Lab participants are all working in the same OCI tenancy and
 compartment so to avoid confusion you need to name your applications with your
 participant number. Wherever you see `NNN` in the lab instructions please
 substitute in your number.
 
->```sh
-> name: `labapp-NNN`
-> vcn: `workshop-vcn`
-> subnet: `Public Subnet nFuS:PHX-AD-1`
->```
-
 ![Create Application](images/create-application.png)
 
 Functions deployed as part of this application will be attached to the
-specifiied vcn and subnet.
+specified vcn and subnet.
 
 ![user input](images/userinput.png) click "Create" to finish.
 
@@ -211,7 +221,7 @@ function in Oracle Functions.  You can do all of this in one command.
 
 ![user input](images/userinput.png)
 >```sh
-> fn --v deploy --app labapp-NNN
+> fn -v deploy --app labapp-NNN
 >```
 
 When we deploy a single function we have to specify the application it belongs
@@ -267,7 +277,7 @@ Successfully created function: nodefn with phx.ocir.io/cloudnative-devrel/shsmit
 ```
 
 Since we turned on verbose mode, the steps to build the Docker container image
-are displayed. Normally you deploy an application without the `--verbose`
+are displayed. Normally you deploy an application without the `-v/--verbose`
 option. If you rerun the command a new image and version is created, pushed to
 OCIR, and deployed.
 
@@ -312,8 +322,8 @@ You can also pass data to the run command, for example:
 {"message":"Hello Bob"}
 ```
 
-The JSON data was parsed and since `name` was set to "Bob", that value is passed
-in the output.
+The JSON data was parsed and since `name` was set to "Bob", that value is passed back
+in the function response.
 
 ### Understand fn deploy
 

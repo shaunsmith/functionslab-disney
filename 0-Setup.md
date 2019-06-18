@@ -11,9 +11,8 @@ Your workshop instructor will provide you with the following:
 2. User Id/Password--to enable you to log into the OCI Console and to deploy
    functions
 3. Tenancy Name--that you will use to log into the OCI account.
-4. Auth Token--used as your password when logging into OCIR
-5. IP Address--of your hosted development environment machine
-6. VNC Password--to allow you to log into your hosted development machine
+4. IP Address--of your hosted development environment machine
+5. VNC Password--to allow you to log into your hosted development machine
 
 > As you make your way through this lab, look out for this icon.
 ![user input](images/userinput.png) Whenever you see it, it's time for you to
@@ -106,49 +105,10 @@ NAME        ID
 labapp-NNN  ocid1.fnapp.oc1.us-phoenix-1.aaaaaaaaag4h7xotdzz27sp7z23ci6z4jqj4raq43ui6ouae5k2kl7irx34a
 ```
 
-## Login to OCIR
-
-In each of the labs you'll be building functions and packaging them as
-Docker container images which you'll push to the OCIR Docker container registry.
-But before you can push container images you'll have to login.  The login command
-has this structure `docker login <region-code>.ocir.io`.  In a terminal type
-the following to login to OCIR in the Phoenix region:
-
-![user input](images/userinput.png)
->```sh
->docker login phx.ocir.io
->```
-
-When prompted, enter your OCIR identity using this format
-`<tenancy-name>/<username>`.  For example `cloudnative-devrel/workshopNNN`.
-
-The password is the **auth token** you were provided with, **NOT** the password
-for your OCI account.
-
-If all goes well you should see a success message:
-
-```sh
-Login Succeeded
-```
-
-## Clone the Workshop Repo
-
-Before we actually get started let's clone the git repo for this workshop so
-that you have all of the necessary materials.  Open a terminal and in your
-home directory (i.e., /home/demo) type:
-
-![user input](images/userinput.png)
->```sh
->git clone https://github.com/shaunsmith/functionslab.git
->```
-
-In the `functionslab` folder you'll find the sources for this workshop along
-with materials for some of the labs you'll be doing.
-
 ## All Set!
 
-Now that you're logged into your development machine, cloned the repo, and are
-able to communicate with Oracle Functions it's time to get started!
+Now that you're logged into your development machine and are able to communicate
+with Oracle Functions it's time to get started!
 
 NEXT: [*Function Labs*](1-Labs.md), UP: [*INDEX*](README.md)
 

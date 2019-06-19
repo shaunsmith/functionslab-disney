@@ -85,12 +85,12 @@ Your output should look something like the following:
 ```shell
 CURRENT NAME      PROVIDER  API URL                                         REGISTRY
         default   default
-*       workshop  oracle    https://functions.us-phoenix-1.oraclecloud.com  phx.ocir.io/cloudnative-devrel/workshop-NNN
+*       workshop  oracle    https://functions.us-phoenix-1.oraclecloud.com  phx.ocir.io/mytenancy/workshop-NNN
 ```
 
 Now to make sure you can be authenticated correctly and communicate with 
 Oracle Functions let's run a command to list all of the existing applications.
-It doesn't matter what the results--just that you do get result to confirm
+It doesn't matter what the results--just that it runs successfully to confirm
 connectivity.
 
 ![user input](images/userinput.png)
@@ -104,6 +104,8 @@ You may see a list of applications something like this:
 NAME        ID
 labapp-NNN  ocid1.fnapp.oc1.us-phoenix-1.aaaaaaaaag4h7xotdzz27sp7z23ci6z4jqj4raq43ui6ouae5k2kl7irx34a
 ```
+
+Or you may see a message saying "No apps found". That's fine too.
 
 ## All Set!
 

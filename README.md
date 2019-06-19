@@ -14,7 +14,8 @@ Oracle Cloud Infrastructure (OCI) IAM and networking.
 ## Overview
 
 This tutorial will show you how to setup your functions development environment
-and then guide you a series of labs focusing on different topics including:
+and then guide you through a series of labs focusing on different topics
+including:
 
 1. Function Basics
 2. Java Functions and Unit testing

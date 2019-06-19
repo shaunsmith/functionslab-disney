@@ -34,31 +34,29 @@ get you started. The `--runtime` option is used to indicate that the function
 we're going to develop will be written in Java 11, the default version as of
 this writing. A number of other runtimes are also supported.  
 
-__If__ you have the `tree` utility installed
-you can see the directory structure that the `init` command has created.
+Use the `find` command to see the directory structure and files that the
+`init` command has created.
 
 ![user input](images/userinput.png)
->`tree`
+>`find .`
 
 ```sh
 .
-├── func.yaml
-├── pom.xml
-└── src
-    ├── main
-    │   └── java
-    │       └── com
-    │           └── example
-    │               └── fn
-    │                   └── HelloFunction.java
-    └── test
-        └── java
-            └── com
-                └── example
-                    └── fn
-                        └── HelloFunctionTest.java
-
-11 directories, 4 files
+./func.yaml
+./pom.xml
+./src
+./src/test
+./src/test/java
+./src/test/java/com
+./src/test/java/com/example
+./src/test/java/com/example/fn
+./src/test/java/com/example/fn/HelloFunctionTest.java
+./src/main
+./src/main/java
+./src/main/java/com
+./src/main/java/com/example
+./src/main/java/com/example/fn
+./src/main/java/com/example/fn/HelloFunction.java
 ```
 
 As usual, the init command has created a `func.yaml` file for your

@@ -163,25 +163,27 @@ necessary Docker images. The `--verbose` option allows you to see this process.
 Before you can deploy a function you'll need to create an application.  You can
 do this using the `fn` CLI or in the Oracle Functions console.  We'll use the
 console as it's somewhat simpler to click on options than to copy/paste network
-OCID for use on the command line.
+ids for use on the command line.
 
-Point your browser to the Oracle Functions console in the Phoenix region and
-login. Functions is not yet available in the left hand navigation menu so you'll
-have to directly enter the URL:
+Open your browser to the Oracle Functions console and
+login:
 
-https://console.us-phoenix-1.oraclecloud.com/functions/
+![user input](images/userinput.png) https://console.us-ashburn-1.oraclecloud.com/functions
 
-Navigate down the compartment hierarchy on the left hand dropdown from the *root*, to *workshop*, to the compartment for your location (disney-la, disney-seattle, disney-nyc, disney-orlando).  You should also be in the
-`us-phoenix-1` region, which you can select on the upper right.
+![user input](images/userinput.png) Once you've logged in, select the Phoenix (us-phoenix-1) region:
 
-![Applications List](images/applications-compartment.png)
+![Region Selection](images/region-selection.png)
 
-If you haven't selected the `us-phoenix-1` region you'll see the following error.  To
-correct simply choose the Phoenix region from the drop down menu.
+![user input](images/userinput.png) Navigate down the compartment hierarchy on the left hand dropdown from the **root**, to **workshop**, to the compartment for your location:
 
-![Functions Unavailable](images/functions-unavailable.png)
+* disney-la
+* disney-nyc
+* disney-orlando
+* disney-seattle
 
-![user input](images/userinput.png) click "Create Application" and complete using the values for your location below where NNN is your lab participant number.  
+![Compartment Selection](images/compartment-selection.png)
+
+![user input](images/userinput.png) click "Create Application" and complete using the values for your location below where NNN is your lab participant number.  Ensure you select the correct **subnet** for your location.
 
 **LA, Seattle:**
 

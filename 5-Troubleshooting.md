@@ -37,20 +37,22 @@ techniques rather than keeping the tests up to date.
 > rm -rf src/test
 >```
 
-__If__ you have the `tree` utility installed you can verify that your structure
-looks like this:
+Use the `find` command verify that your directory structure looks like this:
+
+![user input](images/userinput.png)
+>`find .`
 
 ```sh
 .
-├── func.yaml
-├── pom.xml
-└── src
-    └── main
-        └── java
-            └── com
-                └── example
-                    └── fn
-                        └── HelloFunction.java
+./func.yaml
+./pom.xml
+./src
+./src/main
+./src/main/java
+./src/main/java/com
+./src/main/java/com/example
+./src/main/java/com/example/fn
+./src/main/java/com/example/fn/HelloFunction.java
 ```
 
 Ok, we're ready to begin!
@@ -139,7 +141,7 @@ Step 1/11 : FROM fnproject/fn-java-fdk-build:jdk11-1.0.87 as build-stage
 [INFO] 1 error
 ...
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.3:compile (default-compile) on project hello: Compilation failure
-[ERROR] /function/src/main/java/com/example/fn/HelloFunction.java:[9,5] missing return 
+[ERROR] /function/src/main/java/com/example/fn/HelloFunction.java:[9,5] missing return
 ...
 The command 'mvn package' returned a non-zero code: 1
 ...
@@ -203,7 +205,7 @@ With this change let's deploy the function and invoke it.
 ![user input](images/userinput.png)
 >```sh
 > fn deploy --app labapp-NNN
-```
+>```
 
 ```sh
 Deploying trouble to app: labapp-NNN
@@ -220,14 +222,14 @@ the functions of the 'labapp-NNN' app:
 ![user input](images/userinput.png)
 >```sh
 > fn ls functions labapp-NNN
-```
+>```
 
 Or the slightly more economical:
 
 ![user input](images/userinput.png)
 >```sh
 > fn ls f labapp-NNN
-```
+>```
 
 ```sh
 NAME      IMAGE                                                 ID

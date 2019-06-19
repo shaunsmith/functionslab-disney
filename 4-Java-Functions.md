@@ -111,8 +111,8 @@ where `NNN` is your lap participant number.
 
 ```yaml
 Deploying javafn to app: labapp-NNN
-Building image phx.ocir.io/cloudnative-devrel/shsmith/javafn:0.0.2
-FN_REGISTRY:  phx.ocir.io/cloudnative-devrel/shsmith
+Building image phx.ocir.io/mytenancy/myuser/javafn:0.0.2
+FN_REGISTRY:  phx.ocir.io/mytenancy/myuser
 Current Context:  workshop
 Sending build context to Docker daemon  14.34kB
 Step 1/11 : FROM fnproject/fn-java-fdk-build:jdk11-1.0.86 as build-stage
@@ -147,18 +147,18 @@ Step 11/11 : CMD ["com.example.fn.HelloFunction::handleRequest"]
  ---> Using cache
  ---> 10586c295622
 Successfully built 10586c295622
-Successfully tagged phx.ocir.io/cloudnative-devrel/shsmith/javafn:0.0.2
+Successfully tagged phx.ocir.io/mytenancy/myuser/javafn:0.0.2
 
-Parts:  [phx.ocir.io cloudnative-devrel shsmith javafn:0.0.2]
-Pushing phx.ocir.io/cloudnative-devrel/shsmith/javafn:0.0.2 to docker registry...The push refers to repository [phx.ocir.io/cloudnative-devrel/shsmith/javafn]
+Parts:  [phx.ocir.io mytenancy myuser javafn:0.0.2]
+Pushing phx.ocir.io/mytenancy/myuser/javafn:0.0.2 to docker registry...The push refers to repository [phx.ocir.io/mytenancy/myuser/javafn]
 ...
-Updating function javafn using image phx.ocir.io/cloudnative-devrel/shsmith/javafn:0.0.2...
+Updating function javafn using image phx.ocir.io/mytenancy/myuser/javafn:0.0.2...
 ```
 
 The output message
-`Updating function javafn using image phx.ocir.io/cloudnative-devrel/shsmith/javafn:0.0.2...`
+`Updating function javafn using image phx.ocir.io/mytenancy/myuser/javafn:0.0.2...`
 let's us know that the function is packaged in the image
-"phx.ocir.io/cloudnative-devrel/shsmith/javafn:0.0.2".
+"phx.ocir.io/mytenancy/myuser/javafn:0.0.2".
 
 ## Invoke your Deployed Function
 
